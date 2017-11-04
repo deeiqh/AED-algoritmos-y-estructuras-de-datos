@@ -25,7 +25,62 @@ int main()
 	fib_heap.delete_node(node);
 	
 	fib_heap.draw();
-	
+	/*
+		Fib_heap<int> fib_heap;
+	map< pair< int,Doub_circ_list_node<Fib_node<int>>* >> map;
+	Doub_circ_list_node<Fib_node<int>>* n;
+	pair<int,Doub_circ_list_node<Fib_node<int>>*> par;
+	int key,a,b;
+
+	int opcion;
+	do{
+		cout << "Fibonacci heaps:\n\n";
+		cout << "0) Dibujar heap.\n";
+		cout << "1) Insertar nodo.\n";
+		cout << "2) Extraer mínimo.\n";
+		cout << "3) Decrease key.\n";
+		cout << "4) Delete node.\n";
+		cout << "Elija...\n\n";
+		
+		cin >> opcion;
+		
+		switch opcion{
+			case 0:
+				fib_heap.draw();
+				cout << "Dibujado.\n";
+				break;
+			case 1:
+				cout << "Valor de key: ";
+				cin << key;
+				while(map.find(key != map.end())){					
+					n = fib_heap.insert(key);
+					par = (key,n);
+					map.insert(par);
+				}
+				cout << "Insertado.\n";
+				break;
+			case 2:
+				n = fib_heap.extract_min();
+				cout << "Valor mínimo: "<< n->data.key << " \n";
+				map.erase(n->data.key);
+				break;
+			case 3:
+				cout << "Valor del nodo a decrecer: ";
+				cin << a;
+				cout << "Valor nuevo, menor: ";
+				cin << b;
+				fib_heap.decrease_key(map[a],b);
+				cout << "LLave decrementada.\n";
+				break;
+			case 4:
+				cout << "Valor del nodo a eliminar: ";
+				cin << a;
+				fib_heap.delete_node(map[a]);
+				break;
+		}
+		
+	}while()
+	*/
 	
 	return 0;
 }
