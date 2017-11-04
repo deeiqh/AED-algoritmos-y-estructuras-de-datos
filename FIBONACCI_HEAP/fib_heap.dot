@@ -1,0 +1,23 @@
+graph fib_heap{
+	rankdir=TB
+	style=invis
+
+	subgraph cluster_0{
+		min[shape = none]
+		min
+	}
+	subgraph cluster_1{
+		edge [style=dashed]
+		{rank=same 7 24 }
+		7--24
+	}
+
+	min--7[style=dotted]
+
+	subgraph cluster_2{
+		{rank=same 23 17 [style=filled fillcolor=black fontcolor=white] }
+	}
+
+	7--23 7--17 
+
+}
